@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.card-container {
+  height: 600px;
+  width: 400px;
+  margin: 30px auto;
+  background: #00000029;
+  padding: 10px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.top img {
+  width: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.top button{
+  width: 60px;
+  height: 30px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  gap: 5px;
+}
