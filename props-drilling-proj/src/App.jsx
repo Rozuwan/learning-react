@@ -91,20 +91,20 @@ const App = () => {
   return (
     <>
       <div className="parent">
-        {jobData.map(function (e,idx) {
+        {jobData.map(function (e, idx) {
           console.log(idx);
-          
+
           return (
             <div key={idx}>
               <Card
-              brandLogo={e.brandLogo}
-              company={e.company}
-              post={e.post}
-              tag1={e.tag1}
-              tag2={e.tag2}
-              pay={e.pay}
-              location={e.location}
-            />
+                brandLogo={e.brandLogo}
+                company={e.company}
+                post={e.post}
+                tag1={e.tag1}
+                tag2={e.tag2}
+                pay={e.pay}
+                location={e.location}
+              />
             </div>
           );
         })}
