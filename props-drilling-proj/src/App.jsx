@@ -1,14 +1,15 @@
-import React from 'react'
-import Card from './components/Card'
+import Card from "./components/Card";
+import { User } from "lucide-react";
+import UserData from "./components/UserData";
 
 const App = () => {
   return (
     <>
       <div className="parent">
-        <Card />
+        <UserData name="Roshan" />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
