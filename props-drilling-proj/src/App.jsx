@@ -91,9 +91,12 @@ const App = () => {
   return (
     <>
       <div className="parent">
-        {jobData.map(function (e) {
+        {jobData.map(function (e,idx) {
+          console.log(idx);
+          
           return (
-            <Card
+            <div key={idx}>
+              <Card
               brandLogo={e.brandLogo}
               company={e.company}
               post={e.post}
@@ -102,6 +105,7 @@ const App = () => {
               pay={e.pay}
               location={e.location}
             />
+            </div>
           );
         })}
       </div>
