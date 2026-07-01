@@ -1,24 +1,22 @@
-const Card = () => {
+const Card = (props) => {
   return (
     <div>
       <div className="card-container">
         <div className="top">
           <img
-            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/0c/57/f9/lodge.jpg?w=500&h=-1&s=1"
-            alt=""
+            src={props.image}
+            alt="image"
           />
         </div>
 
         <div className="center">
-          <h2>Swiss villa</h2>
+          <h2>{props.name}</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad facere
-            quia totam optio? Minus fuga delectus similique vero voluptate
-            harum.
+            {props.description}
           </p>
           <div className="details">
-            <h3>Guest favourite</h3>
-            <h3>3 night stay</h3>
+            <h3>{props.tag1}</h3>
+            <h3>{props.tag2}</h3>
           </div>
         </div>
 

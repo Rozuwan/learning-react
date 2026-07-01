@@ -93,7 +93,7 @@ const App = () => {
     <>
       <div className="parent">
         {jobData.map(function (e, idx) {
-          console.log(e.location);
+        
           return (
             <div key={idx}>
               <Card
