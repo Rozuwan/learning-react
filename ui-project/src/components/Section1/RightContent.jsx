@@ -1,11 +1,13 @@
-import RightCard from "./RightCard"
+import RightCard from "./RightCard";
 
-const RightContent = () => {
+const RightContent = (props) => {
   return (
-    <div className='h-full p-4 w-3/4'>
-      <RightCard />
+    <div id="right" className="h-full flex flex-nowrap overflow-x-auto rounded-4xl gap-10 p-4 w-3/4">
+      {props.users.map(function (e,index) {
+        return <RightCard key={index} id={index} img={e.img} intro={e.intro} tag={e.tag} />;
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default RightContent
+export default RightContent;
