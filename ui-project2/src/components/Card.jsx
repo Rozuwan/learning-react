@@ -1,6 +1,5 @@
 import CardComponent from "./CardComponent";
-const Card = (props) => {
-  console.log(props.mountains);
+const Card = ({mountains}) => {
   return (
     <div className="pt-5">
       <div className="relative h-185 w-full bg-white px-8 py-8">
@@ -9,16 +8,16 @@ const Card = (props) => {
         </h1>
         <div className="overflow-x-auto pb-4">
           <div className="flex gap-6">
-            {props.mountains.map(function (e, indx) {
+            {mountains.map(function (mountain) {
               return (
                 <CardComponent
-                  key={indx}
-                  name={e.name}
-                  location={e.location}
-                  desc={e.description}
-                  dist={e.distance}
-                  elev={e.elevation}
-                  img={e.image}
+                  key={mountain.id}
+                  img={mountain.image}
+                  name={mountain.name}
+                  location={mountain.location}
+                  desc={mountain.description}
+                  dist={mountain.distance}
+                  elev={mountain.elevation}
                 />
               );
             })}

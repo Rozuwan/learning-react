@@ -1,13 +1,11 @@
-import Card from "./Card"
+import Card from "./Card";
 
-
-const CardPage = (props) => {
-  
+const CardPage = ({mountains}) => {
   return (
     <div className="px-5 h-screen w-screen bg-black">
-      <Card mountains={props.mountains} />
+      <Card mountains={mountains} />
     </div>
-  )
-}
+  );
+};
 
-export default CardPage
+export default CardPage;
