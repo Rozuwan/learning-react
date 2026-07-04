@@ -3,7 +3,7 @@ import { MapPinPen } from "lucide-react";
 const CardComponent = ({ img, name, location, desc, dist, elev }) => {
   return (
     <div>
-      <div className="relative border border-black rounded-3xl overflow-hidden h-155 w-80 mt-10 shrink-0 snap-center cursor-pointer">
+      <div className="relative border border-black rounded-3xl overflow-hidden h-155 w-100 mt-10 shrink-0 snap-center cursor-pointer">
         <img className="h-full w-full object-cover" src={img} />
         <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent"></div>
 

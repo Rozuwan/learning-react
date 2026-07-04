@@ -22,7 +22,7 @@ const App = () => {
     distance: "690 km from Islamabad",
     elevation: "8,611 m",
     image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1673264933061-f1ea43b13032?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const App = () => {
     distance: "520 km from Kathmandu",
     elevation: "8,586 m",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1724159609417-0b84ff619e7c?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const App = () => {
     distance: "140 km from Kathmandu",
     elevation: "8,516 m",
     image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1697729961187-c70c5f520227?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const App = () => {
     distance: "165 km from Kathmandu",
     elevation: "8,485 m",
     image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1584395631446-e41b0fc3f68d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const App = () => {
     distance: "155 km from Kathmandu",
     elevation: "8,188 m",
     image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1745677617575-62b14956f2d1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 7,
@@ -77,7 +77,7 @@ const App = () => {
     distance: "270 km from Kathmandu",
     elevation: "8,167 m",
     image:
-      "https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1678213193578-d667ccc3e7b8?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 8,
@@ -88,7 +88,7 @@ const App = () => {
     distance: "126 km from Kathmandu",
     elevation: "8,163 m",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1611872110600-b619b39fa69d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 9,
@@ -99,7 +99,7 @@ const App = () => {
     distance: "340 km from Islamabad",
     elevation: "8,126 m",
     image:
-      "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1653163517210-2e3b56190680?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 10,
@@ -110,7 +110,7 @@ const App = () => {
     distance: "160 km from Kathmandu",
     elevation: "8,091 m",
     image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
   return (
