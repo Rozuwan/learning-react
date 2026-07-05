@@ -1,15 +1,13 @@
-import React from "react";
-
 const App = () => {
   return (
     <div>
-      <button
-        onClick={() => {
-          console.log("button is clicked");
+      <input
+        onChange={(e) => {
+          console.log(e.target.value);
         }}
-      >
-        Click me
-      </button>
+        type="text"
+        placeholder="Enter name"
+      />
     </div>
   );
 };
