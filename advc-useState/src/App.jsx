@@ -1,17 +1,16 @@
-import  { useState } from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
-  const [user, setuser] = useState({name:"ram",age:18})
-  function change (){
-    const newName = {...user}
-    newName.name ="shyam"
-    newName.age=20
-    setuser(newName)
+  const [num, setNum] = useState([10,20,30,40])
+  function change() {
+    const newNum =[...num]
+    newNum.push(99)
+    setNum(newNum)
   }
   return (
     <div>
-      <h1>{user.name}{user.age}</h1>
-        <button onClick={change}>Click</button>
+      <h1>{num}</h1>
+      <button onClick={change}>Click</button>
     </div>
   )
 }
