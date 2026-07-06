@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
 
 const App = () => {
-  const [num, setNum] = useState([10,20,30,40])
+  const [user, setuser] = useState({name:"ram",age:20})
   function change() {
-    const newNum =[...num]
-    newNum.push(99)
-    setNum(newNum)
+    setuser(prev=>({...prev,age:30,name:"shyam"}))
   }
   return (
     <div>
-      <h1>{num}</h1>
+      <h1>{user.name}, {user.age}</h1>
       <button onClick={change}>Click</button>
     </div>
   )
