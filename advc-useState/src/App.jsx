@@ -1,16 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const App = () => {
-  const [user, setuser] = useState({name:"ram",age:20})
-  function change() {
-    setuser(prev=>({...prev,age:30,name:"shyam"}))
-  }
+  const [num, setNum] = useState(0);
+  const change = () => {
+    setNum(prev=>(prev+1))
+    setNum(prev=>(prev+1))
+    setNum(prev=>(prev+1))
+    setNum(prev=>(prev+1))
+  };
   return (
     <div>
-      <h1>{user.name}, {user.age}</h1>
+      <h1>{num}</h1>
       <button onClick={change}>Click</button>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
