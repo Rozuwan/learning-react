@@ -1,6 +1,9 @@
 const App = () => {
-  const user = { name: "roshan", age: 18, city: "lalitpur" };
-  localStorage.setItem('user',JSON.stringify(user))
+
+  const user = JSON.parse(localStorage.getItem('user'))
+  console.log(typeof(user))
+  console.log(user)
+
   
   return (
     <div>
