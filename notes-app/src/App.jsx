@@ -14,12 +14,11 @@ const App = () => {
     setDetails("");
   };
 
-  const deleteNote = (idx) => {
-    const copytask = [...task];
-    copytask.splice(idx, 1);
-    setTask(copytask);
-  };
-
+ const deleteNote=(idx)=>{
+  const copytask=[...task]
+  copytask.splice(idx,1)
+  setTask(copytask)
+ }
   return (
     <div className="h-screen bg-black lg:flex">
       <form
@@ -64,11 +63,11 @@ const App = () => {
             return (
               <div
                 key={idx}
-                className="h-52 w-35 rounded-2xl bg-amber-50 p-5 bg-cover items-start flex relative flex-col justify-between"
+                className="h-52 w-36 rounded-2xl bg-amber-50 p-5 flex flex-col justify-between"
               >
                 <div>
                   <h2 className="text-xl font-bold">{e.title}</h2>
-                  <p className="mt-2 font-medium text-gray-500">{e.details}</p>
+                  <p className="mt-2 font-medium text-gray-500 break-all">{e.details}</p>
                 </div>
                 <button
                   onClick={() => {
