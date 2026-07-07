@@ -12,7 +12,12 @@ const App = () => {
     setTask(copytask);
     setTitle("");
     setDetails("");
-    console.log(copytask);
+  };
+
+  const deleteNote = (idx) => {
+    const copytask = [...task];
+    copytask.splice(idx, 1);
+    setTask(copytask);
   };
 
   return (
@@ -54,15 +59,25 @@ const App = () => {
 
       <div className=" bg-black p-5 lg:w-1/2">
         <h1 className="font-bold text-2xl text-white">Your notes :</h1>
-        <div className="flex flex-wrap h-full overflow-auto gap-5 mt-5">
+        <div className="flex flex-wrap h-[90%] overflow-auto gap-5 mt-5">
           {task.map((e, idx) => {
             return (
               <div
                 key={idx}
-                className="h-52 w-35 rounded-2xl bg-amber-50  p-5"
+                className="h-52 w-35 rounded-2xl bg-amber-50 p-5 bg-cover items-start flex relative flex-col justify-between"
               >
-                <h2 className="text-xl font-bold">{e.title}</h2>
-                <p className="mt-2 font-medium text-gray-500">{e.details}</p>
+                <div>
+                  <h2 className="text-xl font-bold">{e.title}</h2>
+                  <p className="mt-2 font-medium text-gray-500">{e.details}</p>
+                </div>
+                <button
+                  onClick={() => {
+                    deleteNote(idx);
+                  }}
+                  className="bg-red-500 w-full p-1 rounded-xl text-white"
+                >
+                  Delete
+                </button>
               </div>
             );
           })}
