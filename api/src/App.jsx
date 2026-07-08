@@ -1,16 +1,14 @@
 import { useState } from "react";
-
+import axios from "axios";
 const App = () => {
-  const [data, setdata] = useState([]);
+  const [data, setData] = useState([]);
   const getData = async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/todos");
-    const jsonData = await response.json();
-    setdata(jsonData);
+    const response = await axios.get("https://jsonplaceholder.typicode.com/todos");
+    setData(response.data);
   };
-
   return (
     <div>
-      <button onClick={getData}>Click</button>
+      <button onClick={getData}>click</button>
       <div>
         {data.map(function (e, index) {
           return <h1 key={index}>{e.title}</h1>;
