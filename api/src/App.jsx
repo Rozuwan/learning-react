@@ -1,21 +1,19 @@
-import axios from "axios";
 import { useState } from "react";
 
 const App = () => {
-  const [data, setData] = useState([]);
+  const [data, setdata] = useState([]);
   const getData = async () => {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/todos",
-    );
-    setData(response.data);
-    
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    const jsonData = await response.json();
+    setdata(jsonData);
   };
+
   return (
     <div>
       <button onClick={getData}>Click</button>
       <div>
-        {data.map(function (e,idx) {
-          return <h3 >Hello {idx}</h3>
+        {data.map(function (e, index) {
+          return <h1 key={index}>{e.title}</h1>;
         })}
       </div>
     </div>
