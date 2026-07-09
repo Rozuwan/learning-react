@@ -1,23 +1,49 @@
-import  axios  from "axios";
+import axios from "axios";
+import { useEffect } from "react";
 import { useState } from "react";
+
 const App = () => {
+  const [user, setUser] = useState([]);
+  const [index, setIndex] = useState(1);
 
-  const [userData, setUserData] = useState([])
+  useEffect(
+    function () {
+      const getData = async () => {
+        const response = await axios.get(
+          `https://picsum.photos/v2/list?page=${index}&limit=20`,
+        );
+        console.log(response.data);
+        setUser(response.data);
+      };
 
-  const getData = async () => {
-    const response = await axios.get(
-      "https://picsum.photos/v2/list?page=1&limit=20",
-    );
-     setUserData(response.data);
-  };
-
-
+      getData();
+    },
+    [index],
+  );
   return (
     <div>
-      <button onClick={getData}>Click</button>
+      <h1>{index}</h1>
+      <button
+        onClick={() => {
+          if (index > 1) {
+            setIndex(index - 1);
+          }
+        }}
+      >
+        Prev
+      </button>
+      <button
+        onClick={() => {
+          setIndex(index + 1);
+        }}
+      >
+        Next
+      </button>
       <div>
-        {userData.map((e,idx)=>{
-          return  <img height={200} key={idx} src={e.download_url} alt={e.author}/>
+        {user.map(function (e, idx) {
+          return (
+            <img loading="lazy" height={200} key={idx} src={e.download_url} alt={e.author} />
+          );
         })}
       </div>
     </div>
