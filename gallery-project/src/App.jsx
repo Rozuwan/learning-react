@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Card from "./Card";
 
 const App = () => {
   const [userData, setUserData] = useState([]);
@@ -12,7 +13,7 @@ const App = () => {
         setLoading(true);
 
         const response = await axios.get(
-          `https://picsum.photos/v2/list?page=${index}&limit=20`
+          `https://picsum.photos/v2/list?page=${index}&limit=20`,
         );
 
         setUserData(response.data);
@@ -41,22 +42,10 @@ const App = () => {
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
             {userData.map((e, idx) => (
-              <div
-                className="rounded-xl overflow-hidden shadow-lg hover:scale-105 duration-300"
-                key={idx}
-              >
-                <img
-                  src={e.download_url}
-                  alt="images"
-                  className="w-full h-60 object-cover"
-                  loading="lazy"
-                  onClick={() => window.open(e.download_url, "_blank")}
-                />
-
-                <p className="text-center font-bold text-xl py-2">
-                  {e.author}
-                </p>
-              </div>
+              <Card 
+              key={idx} 
+              image={e.download_url} 
+              author={e.author} />
             ))}
           </div>
 
