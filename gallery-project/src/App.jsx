@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
   const [userData, setUserData] = useState([]);
@@ -11,20 +11,27 @@ const App = () => {
     setUserData(response.data);
   };
 
+  useEffect(function () {
+    getData();
+  }, []);
+
   return (
     <div className="h-screen bg-black text-white p-4 overflow-auto">
-      <button
-        onClick={getData}
-        className="bg-green-600 text-white px-5 py-2 rounded active:scale-95"
-      >
-        get data
-      </button>
-      <div className="">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 ">
         {userData.length > 0 ? (
           userData.map((e, idx) => {
             return (
-              <div key={idx}>
-                <img src={e.download_url} alt="images" />
+              <div
+                className="rounded-xl overflow-hidden shadow-lg hover:scale-105 duration-300"
+                key={idx}
+              >
+                <img
+                  src={e.download_url}
+                  alt="images"
+                  className="w-full h-60 object-cover"
+                  onClick={() => window.open(e.download_url, "_blank")}
+                />
+                <p className="text-center">{e.author}</p>
               </div>
             );
           })
