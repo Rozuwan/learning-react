@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
+import Card from "./Card";
 
 const App = () => {
   const [user, setUser] = useState([]);
@@ -40,10 +41,12 @@ const App = () => {
         Next
       </button>
       <div>
-        {user.map(function (e, idx) {
-          return (
-            <img loading="lazy" height={200} key={idx} src={e.download_url} alt={e.author} />
-          );
+        {user.map(function (e) {
+          return <Card 
+          key={e.id} 
+          image={e.download_url}
+          author={e.author}
+          />;
         })}
       </div>
     </div>
