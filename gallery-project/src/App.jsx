@@ -11,7 +11,6 @@ const App = () => {
     setUserData(response.data);
   };
 
-
   return (
     <div className="h-screen bg-black text-white p-4 overflow-auto">
       <button
@@ -21,13 +20,17 @@ const App = () => {
         get data
       </button>
       <div className="">
-        {userData.map((e, idx) => {
-          return (
-            <div key={idx}>
-              <img src={e.download_url} alt="images" />
-            </div>
-          );
-        })}
+        {userData.length > 0 ? (
+          userData.map((e, idx) => {
+            return (
+              <div key={idx}>
+                <img src={e.download_url} alt="images" />
+              </div>
+            );
+          })
+        ) : (
+          <p>No data available</p>
+        )}
       </div>
     </div>
   );
