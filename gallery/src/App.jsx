@@ -1,7 +1,7 @@
 import axios from "axios";
-import { useEffect } from "react";
 import { useState } from "react";
 import Card from "./Card";
+import { useEffect } from "react";
 
 const App = () => {
   const [user, setUser] = useState([]);
@@ -13,7 +13,6 @@ const App = () => {
         const response = await axios.get(
           `https://picsum.photos/v2/list?page=${index}&limit=20`,
         );
-        console.log(response.data);
         setUser(response.data);
       };
 
@@ -42,11 +41,7 @@ const App = () => {
       </button>
       <div>
         {user.map(function (e) {
-          return <Card 
-          key={e.id} 
-          image={e.download_url}
-          author={e.author}
-          />;
+          return <Card key={e.id} image={e.download_url} author={e.author} />;
         })}
       </div>
     </div>
