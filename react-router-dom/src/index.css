@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #000;
+  color: white;
+}
+.nav-items {
+  gap: 40px;
+  display: flex;
+}
+.nav-items a {
+  color: white;
+  text-decoration: none;
+}
