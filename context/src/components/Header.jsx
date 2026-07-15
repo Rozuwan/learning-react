@@ -1,11 +1,11 @@
 import { useContext } from "react"
-import { DataContext } from "../context/UserContext"
+import { userContext } from "../context/DataContext"
 
 const Header = () => {
-   const name = useContext(DataContext)
+    const name = useContext(userContext)
   return (
     <div>
-      <h1>Header{name}</h1>
+      <h1>Header {name}</h1>
     </div>
   )
 }
