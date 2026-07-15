@@ -7,15 +7,3 @@ html, body{
     height: 100%;
     width: 100%;
 }
-.nav{
-    display: flex;
-    background: #ff6565;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px ;
-}
-.nav2{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}

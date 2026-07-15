@@ -1,11 +1,19 @@
-import { useState } from "react"
-import Navbar from "./Component/Navbar"
+import { useContext } from "react"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Section from "./components/Section"
+import { DataContext } from "./context/UserContext"
 
 function App() {
-  const [theme, setTheme] = useState('light')
+  const data = useContext(DataContext)
+  console.log(data);
+  
   return (
     <div>
-      <Navbar theme={theme}/>
+      <h1>This is APP{data}</h1>
+      <Header />
+      <Section />
+      <Footer />
     </div>
   )
 }
