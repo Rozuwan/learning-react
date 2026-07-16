@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { ToastContainer, toast } from "react-toastify";
 
 const Output = () => {
   const [copied, setCopied] = useState(false);
@@ -9,10 +9,11 @@ const Output = () => {
     try {
       await navigator.clipboard.writeText(shortedLink);
       setCopied(true);
-    
+      toast.success("Copied url successfully!");
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error("Failed to copy text: ", err);
+      toast.error("Something went wrong");
     }
   };
   return (
@@ -29,6 +30,7 @@ const Output = () => {
           </button>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };
