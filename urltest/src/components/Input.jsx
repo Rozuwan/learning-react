@@ -1,5 +1,11 @@
+import { useState } from "react"
 
 const Input = () => {
+    
+    const [, set] = useState(second)
+
+
+
   return (
     <>
       <div className="flex gap-4 max-h-screen justify-center items-center mt-10 relative  ">

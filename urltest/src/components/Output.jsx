@@ -2,9 +2,11 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
 const Output = () => {
+    // copied 
   const [copied, setCopied] = useState(false);
   const [shortedLink, setShortedLink] = useState("Roshan");
 
+//   copy function with toast
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(shortedLink);
@@ -26,7 +28,7 @@ const Output = () => {
             onClick={handleCopy}
             className="bg-black border-2 border-black text-white rounded-full py-2 px-3 active:scale-95"
           >
-            Copy
+            {copied ? "Copied!" : "Copy"}
           </button>
         </div>
       </div>
